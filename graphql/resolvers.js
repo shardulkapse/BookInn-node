@@ -58,14 +58,14 @@ module.exports = {
     }
   },
   getList: async function ({ page }) {
-    const pageSkip = (page - 1) * 12;
+    const pageSkip = (page - 1) * 16;
     const client = await mongoConnectHandler();
     try {
       const docs = client
         .db("sample_airbnb")
         .collection("listingsAndReviews")
         .find({})
-        .limit(12)
+        .limit(16)
         .skip(pageSkip);
       const data = await docs.toArray();
       const result = data.map((el) => ({
