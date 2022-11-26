@@ -22,7 +22,7 @@ app.use(
 
 app.listen(PORT, (err) => {
   if (!err) {
-    console.log("Server is running");
+    console.log(`Server is running ${PORT}`);
   } else {
     console.log(err);
   }
