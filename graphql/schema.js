@@ -26,6 +26,7 @@ type listData {
 type RootQuery {
     loginUser(userInput: loginUserInput!): userLoginData
     getList(page: Int!): [listData!]
+    searchList(query: String! page: Int!): [listData!]
 }
 
 input signInUserInput {
